@@ -6,6 +6,13 @@ const prueba2 = require("./Post");
 const app = express();
 const authRoute = require("./auth");
 const postRoute = require("./crud");
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+)
 
 //Conexion a base de datos con mongoose
 
@@ -43,7 +50,7 @@ app.use("/api/posts", postRoute);
 //habilitamos el servidor a nuestro puerto
 
 app.listen(app.get("port"), () => {
-  console.log("backend escuchando a puerto 5000");
+  console.log("backend escuchando a puerto 5000 o PORT de heroku");
 });
 
 // FUNCIONES BASURA DE PRUEBA
