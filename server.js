@@ -10,7 +10,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://idaxmx.com/xcheldev"],
+    origin: ["http://localhost:3000", "https://idaxmx.com"],
   })
 )
 
