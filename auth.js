@@ -2,7 +2,7 @@ const router = require("express").Router();
 const xchel = require("./Xchel");
 
 //LOGIN get, solo queremos leer y hacer el class styling
-router.post("/xcheladministrador", async (req, res) => {
+router.post("/XchelAdministrador", async (req, res) => {
   try {
     const user = await xchel.findOne({ email: req.body.email });
     !JSON.stringify(user) && res.status(400).json("Datos incorrectos");
